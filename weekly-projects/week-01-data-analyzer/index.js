@@ -9,6 +9,42 @@ const rawData = [
   -5
 ];
 
+const dataInput = document.querySelector("#data-input");
+const analyzeButton = document.querySelector("#analyze-button");
+const resultOutput = document.querySelector("#result-output");
+
+analyzeButton.addEventListener("click", () => {
+  const inputText = dataInput.value.trim();
+  const inputValues = inputText.split(",");
+
+  if (inputText === "") {
+      resultOutput.textContent = "Enter at least one value";
+      return;
+  }
+
+  const parsedValues = inputValues.map(value => {
+      const cleanedValues = value.trim();
+
+      if (cleanedValues === "") {
+          return NaN;
+      }
+      return Number(cleanedValues);
+  });
+    const analysis = analyzeData(parsedValues)
+    console.log(analysis);
+
+    resultOutput.textContent = `
+  Sum: ${analysis.sum}
+  Valid values: ${analysis.validCount}
+  Invalid values: ${analysis.invalidCount}
+  Minimum: ${analysis.min}
+  Maximum: ${analysis.max}
+  Average: ${analysis.average}
+  Valid numbers: ${analysis.validNumbers.join(", ")}
+    `
+});
+
+
 function analyzeData(values) {
     const result = values.reduce((accumulator, currentValue) => {
     if (Number.isFinite(currentValue)) {
@@ -40,7 +76,7 @@ function analyzeData(values) {
 }
 
 const analysisResult = analyzeData(rawData);
-console.log("Analysis Result:", analysisResult);
+/*console.log("Analysis Result:", analysisResult);
 console.log(analyzeData([5, 10, 15]));
 console.log(analyzeData(["10", null, NaN]));
 
@@ -60,4 +96,4 @@ console.log(
 console.log(
   "Empty:",
   analyzeData([])
-);
+);*/

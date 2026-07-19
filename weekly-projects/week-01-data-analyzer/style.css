@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Pliant:wdth,wght@112.5,100..900&family=Unbounded:wght@200..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: unbounded, sans-serief;
+}
+
+body{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    background-color: #7d39eb;
+    max-width: 400px;
+    color: black;
+
+}
+
+.container{
+    padding: 20px;
+    margin-top: 200px;
+    border-radius: 20px;
+    background-color: #c6ff33;
+}
+
+.logo{
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+#data-input{
+    padding:10px 20px;
+    border-radius: 10px;
+    border:none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#analyze-button{
+    padding:10px 20px;
+    border-radius: 10px;
+    border:none;
+    background-color: black;
+    color: #fff;
+}

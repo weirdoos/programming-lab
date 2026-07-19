@@ -1,121 +1,99 @@
+Вставь этот текст целиком в `README.md`:
+
 ````markdown
 # Data Analyzer
 
-A small JavaScript project that analyzes an array containing valid and invalid values.
+A small browser application that analyzes a list of values entered by the user.
+
+The project started as a console-based JavaScript exercise and was later converted into an interactive browser application using the DOM and browser events.
 
 ## Features
 
-- Calculates the sum of valid numbers
-- Calculates the average value
-- Finds the minimum value
-- Finds the maximum value
-- Counts valid numbers
-- Counts invalid values
-- Returns an array of valid numbers
-- Handles empty arrays
-- Handles arrays without valid numbers
+The application:
 
-## Valid Values
+- reads comma-separated values from a text field;
+- converts valid numeric strings into numbers;
+- detects invalid values;
+- calculates the sum;
+- calculates the average;
+- finds the minimum and maximum values;
+- counts valid and invalid values;
+- displays valid numbers;
+- shows the analysis result directly on the page;
+- handles empty input.
 
-A value is considered valid when it is a finite JavaScript number:
+## Example
 
-```javascript
-Number.isFinite(value)
+Input:
+
+```text
+10, 20, hello, 30, -5
 ```
 
-Examples of valid values:
+Output:
 
-```javascript
-10
--5
-0
-3.14
+```text
+Sum: 55
+Valid values: 4
+Invalid values: 1
+Minimum: -5
+Maximum: 30
+Average: 13.75
+Valid numbers: 10, 20, 30, -5
 ```
 
-Examples of invalid values:
+## Technologies
 
-```javascript
-"20"
-null
-undefined
-NaN
-Infinity
--Infinity
+- HTML
+- CSS
+- JavaScript
+- DOM API
+- Browser events
+
+## Project Structure
+
+```text
+week-01-data-analyzer/
+├── index.html
+├── style.css
+├── index.js
+└── README.md
 ```
 
-## Example Input
+## JavaScript Concepts Practiced
 
-```javascript
-const rawData = [
-  10,
-  "20",
-  30,
-  NaN,
-  null,
-  40,
-  Infinity,
-  -5
-];
-```
+- functions;
+- arrays;
+- objects;
+- `reduce()`;
+- `map()`;
+- `Number.isFinite()`;
+- `Math.min()` and `Math.max()`;
+- string methods;
+- template literals;
+- DOM element selection;
+- event listeners;
+- reading user input with `.value`;
+- changing page content with `.textContent`;
+- validation and early returns.
 
-## Usage
+## How It Works
 
-```javascript
-const analysisResult = analyzeData(rawData);
+1. The user enters values separated by commas.
+2. JavaScript reads the text from the input element.
+3. The text is split into an array.
+4. Each value is trimmed and converted into a number.
+5. Invalid values become `NaN`.
+6. The `analyzeData()` function processes the array.
+7. The result is displayed on the page.
 
-console.log(analysisResult);
-```
+## How to Run
 
-## Example Result
+Open `index.html` in a web browser.
 
-```javascript
-{
-  sum: 75,
-  validCount: 4,
-  invalidCount: 4,
-  min: -5,
-  max: 40,
-  validNumbers: [10, 30, 40, -5],
-  average: 18.75
-}
-```
+No installation or external dependencies are required.
 
-## Returned Properties
+## Current Status
 
-| Property | Description |
-|---|---|
-| `sum` | Sum of all valid numbers |
-| `validCount` | Number of valid values |
-| `invalidCount` | Number of invalid values |
-| `min` | Smallest valid number |
-| `max` | Largest valid number |
-| `validNumbers` | Array containing all valid numbers |
-| `average` | Average of all valid numbers |
-
-When the input contains no valid numbers, `min`, `max`, and `average` are returned as `null`.
-
-## Edge Cases
-
-The function supports:
-
-```javascript
-analyzeData([]);
-analyzeData([5, 10, 15]);
-analyzeData(["10", null, NaN, Infinity]);
-analyzeData([10, "20", 30, NaN, null, 40, Infinity, -5]);
-```
-
-## JavaScript Concepts Used
-
-- Functions
-- Arrays
-- Objects
-- `Array.prototype.reduce`
-- `Number.isFinite`
-- Ternary operator
-- Spread syntax
-- Object accumulator
-- Array mutation with `push`
-- Input validation
-- Edge-case handling
+The browser version is functional and includes a custom responsive interface.
 ````
