@@ -9,14 +9,18 @@ This repository documents my progress in:
 - JavaScript and full-stack development
 - Algorithms and data structures
 - Computer architecture
-- C++ and embedded systems
+- Python
 - Testing, debugging, and technical documentation
+
+In the future:
+- Computer Engineering, C++, Arduino technologies and more.
 
 ## Laboratories
 
 ### JavaScript Foundations
 
-- [01 — Array Boundaries, Undefined and NaN](./01-array-boundaries)
+- [01 - Array Boundaries, Undefined and NaN](./01-array-boundaries)
+- [02 - Array and References](./02-arrays-and-references)
 
 ## Learning Method
 
