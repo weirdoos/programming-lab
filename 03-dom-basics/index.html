@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+  <title>DOM Basics</title>
+
+  <script src="./index.js" defer></script>
+</head>
+
+<body>
+  <main id="app">
+    <h1>DOM Playground</h1>
+
+    <section class="card" data-topic="dom">
+      <h2>First Card</h2>
+
+      <p class="description">
+        This element will be controlled by JavaScript.
+      </p>
+
+      <button id="change-button" type="button">
+        Change card
+      </button>
+    </section>
+
+    <section>
+        <h2>Event Delegation</h2>
+
+        <div id="controls">
+            <button data-action="first">First</button>
+            <button data-action="second">Second</button>
+            <button data-action="third">Third</button>
+        </div>
+    </section>
+
+    <div id="inventory">
+        <button data-item="sword">Sword</button>
+        <button data-item="shield">Shield</button>
+        <button data-item="potion">Potion</button>
+    </div>
+
+    <section>
+  <h2>Form Practice</h2>
+
+  <form id="name-form">
+    <label for="name-input">Name:</label>
+
+    <input
+      id="name-input"
+      type="text"
+      placeholder="Enter your name"
+    >
+
+    <button type="submit">Send</button>
+  </form>
+
+  <p id="form-output"></p>
+</section>
+
+  </main>
+
+  <script src="index.js"></script>
+</body>
+</html>
