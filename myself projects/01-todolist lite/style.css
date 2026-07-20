@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Pliant:wdth,wght@112.5,100..900&family=Unbounded:wght@200..900&display=swap');
+
+
+*{
+    margin: 0;
+    padding:0;
+
+}
+
+body{
+    font-family: unbounded, sans-serif;
+}
+
+.con{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    height: 100vh;
+    width: 100vh; 
+}
+
+.container{ 
+    display:flex;
+    flex-direction: column;
+    align-items: center; 
+    height: 100vh;
+    max-height: 600px;
+    max-width: 400px;
+    width: 100vh;
+    background-color: rgb(182, 181, 181);
+    padding: 30px;
+    border-radius: 40px;
+}
+
+.inputStroke{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#taskInput{
+    padding: 10px 20px;
+    border-radius: 20px;
+    border:none;
+
+
+}
+
+#inputButton{
+    padding: 10px 20px;
+    border-radius: 20px;
+    border:none;
+}
+
+.tasks{
+    display: flex;
+    justify-content: space-between;
+}
+
+.deleteBtn{
+    padding: 10px 20px;
+    border-radius: 20px;
+    border:none;
+    background-color: rgb(255, 1, 1);
+    color: white;
+}
+
+.completeBtn{
+    padding: 10px 20px;
+    border-radius: 20px;
+    border:none;
+    background-color: rgb(226, 226, 225);
+    color: black;
+    
+}
+
+.complete{
+    color:grey;
+    list-style: none;
+}
+
+.task{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
