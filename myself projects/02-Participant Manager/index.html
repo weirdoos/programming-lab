@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section>
+        <h2>Participant Manager</h2>
+
+        <form id="participant-form">
+            <input
+            id="participant-name"
+            type="text"
+            placeholder="Participant name"
+            required
+            >
+
+            <select id="participant-role">
+                <option value="Developer">Developer</option>
+                <option value="Designer">Designer</option>
+                <option value="Tester">Tester</option>
+            </select>
+
+            <button type="submit" class="sendBtn">Add participant</button>
+        </form>
+
+        <p id="participant-error"></p>
+
+        <div id="participant-list"></div>
+    </section>
+
+
+    <script src="index.js"></script>
+</body>
+</html>
