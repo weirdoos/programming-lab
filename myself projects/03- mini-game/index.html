@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Битва героев</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            padding: 40px;
+            background: #1a1a2e;
+            color: #fff;
+        }
+        .character {
+            background: #16213e;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            width: 220px;
+            border: 2px solid #0f3460;
+        }
+        .character h2 {
+            margin: 0 0 10px 0;
+            color: #e94560;
+        }
+        .hp-bar {
+            background: #333;
+            height: 24px;
+            border-radius: 12px;
+            overflow: hidden;
+            margin: 10px 0;
+        }
+        .hp-fill {
+            height: 100%;
+            background: #4ecca3;
+            width: 100%;
+            transition: width 0.3s ease;
+        }
+        .hp-text {
+            font-weight: bold;
+            margin: 5px 0 15px 0;
+        }
+        button {
+            background: #e94560;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background: #c73e54;
+        }
+        .log {
+            margin-top: 40px;
+            background: #0f3460;
+            padding: 20px;
+            border-radius: 12px;
+            min-height: 80px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Персонаж 1: Воин -->
+    <div class="character" id="warrior-panel">
+        <h2 id="warrior-name">⚔️ Воин</h2>
+        <div class="hp-bar">
+            <div class="hp-fill" id="warrior-hp-fill" style="width: 100%;"></div>
+        </div>
+        <div class="hp-text" id="warrior-hp-text">HP: 200 / 200</div>
+        <button id="attack-btn">Атаковать Мага</button>
+    </div>
+
+    <!-- Персонаж 2: Маг -->
+    <div class="character" id="mage-panel">
+        <h2 id="mage-name">🧙 Маг</h2>
+        <div class="hp-bar">
+            <div class="hp-fill" id="mage-hp-fill" style="width: 100%;"></div>
+        </div>
+        <div class="hp-text" id="mage-hp-text">HP: 150 / 150</div>
+    </div>
+
+    <!-- Лог битвы -->
+    <div class="log" id="log">
+        <p><strong>⚔️ Лог битвы:</strong></p>
+        <p id="log-message">Нажми "Атаковать Мага", чтобы начать бой!</p>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
