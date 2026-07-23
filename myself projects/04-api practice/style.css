@@ -1,0 +1,16 @@
+body{
+    background-color: aquamarine;
+}
+
+.load-todo-form{
+    background-color:antiquewhite;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.result{
+    background-color:rgb(250, 184, 99);
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: 50px;
+}
